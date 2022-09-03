@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplikasi Rak Buku</title>
+    <link rel="shortcut icon" href="assets/bookshelf.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h2 class="header-title">Rak Buku APP</h2>
+      <form id="searchBook">
+        <input
+          type="search"
+          class="search-data"
+          id="searchKeyword"
+          placeholder="Cari Buku"
+          autocomplete="off"
+          required
+        />
+        <button type="submit" id="searchButton" class="fas fa-search"></button>
+      </form>
+    </header>
+    <main>
+      <div class="notification">
+        <div class="flash-notif hidden" id="flash-notif"></div>
+      </div>
+      <section class="input_section">
+        <h2 class="section-title">Tambah Buku Baru</h2>
+        <form id="inputBook">
+          <div class="input">
+            <input
+              id="inputBookTitle"
+              autocomplete="off"
+              type="text"
+              placeholder="Judul Buku"
+              required
+            />
+          </div>
+          <div class="input">
+            <input
+              id="inputBookAuthor"
+              autocomplete="off"
+              type="text"
+              placeholder="Pengarang"
+              required
+            />
+          </div>
+          <div class="input">
+            <input
+              id="inputBookYear"
+              autocomplete="off"
+              placeholder="Tahun Terbit"
+              type="number"
+              required
+            />
+          </div>
+          <div class="input_inline">
+            <label for="inputBookIsComplete">Selesai dibaca</label>
+            <input id="inputBookIsComplete" class="checkbox" type="checkbox" />
+          </div>
+          <button id="bookSubmit" type="submit">Tambahkan Buku</button>
+        </form>
+      </section>
+      <section class="book_shelf">
+        <h2 class="section-title">Belum selesai dibaca</h2>
+
+        <div id="incompleteBookshelfList" class="book_list"></div>
+      </section>
+
+      <section class="book_shelf">
+        <h2 class="section-title">Selesai dibaca</h2>
+
+        <div id="completeBookshelfList" class="book_list"></div>
+      </section>
+    </main>
+  </body>
+  <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.29/dist/sweetalert2.all.min.js"></script>
+</html>
